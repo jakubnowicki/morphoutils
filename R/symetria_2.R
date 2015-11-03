@@ -6,7 +6,6 @@
 #' @param left Leftside landmark
 #' @param right Righside landmarks
 #' @export
-#' @examples symetria.2()
 
 symetria.2<-function(dane,mid,left,right) {
   n<-dim(dane)[3]

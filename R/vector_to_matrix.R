@@ -3,7 +3,6 @@
 #' Function converts vector of semilandmarks into matrix version
 #' @param single.curve Vector to be converted
 #' @export
-#' @examples vector.to.matrix()
 
 vector.to.matrix <- function(single.curve) {
   n.rows<-length(single.curve)-2

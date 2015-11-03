@@ -9,17 +9,14 @@ OSymm(X, midline, right, left)
 \arguments{
 \item{X}{Landmark set}
 
+\item{midline}{Midline landmarks}
+
 \item{right}{Righside landmarks}
 
 \item{left}{Leftside landmark}
-
-\item{mid}{Midline landmarks}
 }
 \description{
 Symmetrize and estimate missing landmarks in bilateral set.
-}
-\examples{
-OSymm()
 }
 \author{
 Annat Haber

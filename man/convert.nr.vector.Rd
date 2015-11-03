@@ -20,9 +20,6 @@ convert.nr.vector(landmark.vector, mid, left, right, asym.to.sym = TRUE)
 \description{
 Function to convert a set of landmark numbers between asymmetric and symmetrized version.
 }
-\examples{
-convert.nr.vector()
-}
 \keyword{conversion}
 \keyword{landmarks,}
 

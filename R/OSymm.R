@@ -2,12 +2,12 @@
 #' 
 #' Symmetrize and estimate missing landmarks in bilateral set.
 #' @param X Landmark set
-#' @param mid Midline landmarks
+#' @param midline Midline landmarks
 #' @param left Leftside landmark
 #' @param right Righside landmarks
 #' @author Annat Haber
 #' @export
-#' @examples OSymm()
+
 
 OSymm <- function(X, midline, right, left) {
   ncl <- ncol(X)

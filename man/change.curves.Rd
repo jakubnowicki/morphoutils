@@ -14,7 +14,4 @@ change.curves(curves, points.to.remove)
 \description{
 Function removes landmarks from semilandmark matrix and changes numbers of remining ones.
 }
-\examples{
-change.curves()
-}
 

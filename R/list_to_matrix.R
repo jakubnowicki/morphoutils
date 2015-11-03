@@ -3,7 +3,6 @@
 #' Function converts a list of semilandmarks into a matrix that can be used in geomorph::gpagen.
 #' @param curves.list List of semilandmark vectors
 #' @export
-#' @examples list.to.matrix()
 
 list.to.matrix <- function(curves.list) {
   binded.curves <- NULL

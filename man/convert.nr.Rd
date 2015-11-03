@@ -20,9 +20,6 @@ convert.nr(landmark, mid, left, right, asym.to.sym = TRUE)
 \description{
 A function to convert landmark number between asymmetric and symmetrized version.
 }
-\examples{
-convert.nr()
-}
 \keyword{conversion}
 \keyword{landmarks,}
 

@@ -5,7 +5,6 @@
 #' @param curves Semilandmark matrix
 #' @param break.points First rows of the curves
 #' @export
-#' @examples matrix.to.list()
 
 matrix.to.list <- function(curves,break.points) {
   splited.curves <- list()

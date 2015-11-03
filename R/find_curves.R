@@ -3,7 +3,6 @@
 #' Finds beginings of curves in semilandmark curves matrix used in geomorph::gpagen
 #' @param curves Matrix of curves
 #' @export
-#' @examples find.curves()
 
 find.curves <- function(curves) {
   break.points <- 1

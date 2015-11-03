@@ -18,7 +18,4 @@ symetria.2(dane, mid, left, right)
 \description{
 Symmetrize and estimate missing landmarks in a set of specimens.
 }
-\examples{
-symetria.2()
-}
 

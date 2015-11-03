@@ -4,7 +4,6 @@
 #' @param curves Semilandmark matrix
 #' @param points.to.remove Vector of landamrk numbers to be removed
 #' @export
-#' @examples change.curves()
 
 change.curves <- function(curves,points.to.remove) {
   break.points <- find.curves(curves)

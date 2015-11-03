@@ -8,8 +8,6 @@
 #' @param asym.to.sym Direction of conversion. Default from asymetric to symmetrized
 #' @keywords landmarks, conversion
 #' @export
-#' @examples
-#' convert.nr()
 
 convert.nr <- function(landmark,mid,left,right,asym.to.sym = TRUE) {
   asym <- c(mid,right,left)

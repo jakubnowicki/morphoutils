@@ -12,7 +12,4 @@ vector.to.matrix(single.curve)
 \description{
 Function converts vector of semilandmarks into matrix version
 }
-\examples{
-vector.to.matrix()
-}
 

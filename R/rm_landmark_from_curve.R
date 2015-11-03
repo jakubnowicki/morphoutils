@@ -5,7 +5,6 @@
 #' @param curve Curve to change
 #' @param landmark.nr Number of landmark to remove
 #' @export
-#' @examples rm.landmark.from.curve 
 
 rm.landmark.from.curve <- function(curve,landmark.nr) {
   curve <- as.vector(curve)
