@@ -1,4 +1,10 @@
-# usuwa wybrane punkty z tabeli semilandmarków
+#' Remove landmarks from semilandmark matrix
+#' 
+#' Function removes landmarks from semilandmark matrix and changes numbers of remining ones.
+#' @param curves Semilandmark matrix
+#' @param points.to.remove Vector of landamrk numbers to be removed
+#' @export
+#' @examples change.curves()
 
 change.curves <- function(curves,points.to.remove) {
   break.points <- find.curves(curves)
