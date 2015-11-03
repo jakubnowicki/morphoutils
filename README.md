@@ -14,3 +14,4 @@ License: GPL-2
 #### **Instalation:**
 library(devtools)  
 install_github('jakubnowicki/morphoutils')
+
