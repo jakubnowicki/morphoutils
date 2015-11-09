@@ -4,7 +4,7 @@ Package: morphoutils
 Type: Package  
 Title: Utility functions for geometric morphometrics  
 Version: 0.01  
-Date: 2015-11-02  
+Date: 2015-09-30  
 Author: Jakub Nowicki  
 Maintainer: Jakub Nowicki <j.nowicki@student.uw.edu.pl>  
 Description: A set of utility functions that can be used with geomorph package for removing speicfied landmarks 
