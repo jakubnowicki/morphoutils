@@ -3,7 +3,7 @@
 Package: morphoutils  
 Type: Package  
 Title: Utility functions for geometric morphometrics  
-Version: 0.01  
+Version: 0.02  
 Date: 2015-09-30  
 Author: Jakub Nowicki  
 Maintainer: Jakub Nowicki <j.nowicki@student.uw.edu.pl>  
