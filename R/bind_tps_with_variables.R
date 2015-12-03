@@ -19,7 +19,7 @@ bind.tps.with.variables <- function(...,list.of.variables,as.factor = TRUE) {
       stop('wrong number of variables')
     }
   }
-  landmarks <- abind(data, along = 3)
+  landmarks <- abind::abind(data, along = 3)
   output <- list()
   output[[1]] <- landmarks
   for (i in 1:n.variables) {
