@@ -6,12 +6,12 @@
 \usage{
 ar.to.df(data, specimens.names = FALSE)
 }
+\arguments{
+\item{data}{landmark array}
+
+\item{specimens.names}{optional vector containing specimens names}
+}
 \description{
-Converts landmark array into data frame with additional column with specimens name. Can be used with lattice xyplot
- function to plot all specimens.
- 
- @param data landmark array
- @param specimens.names optional vector containing specimens names
- @export
+Converts landmark array into data frame with additional column with specimens name. Can be used with lattice xyplot function to plot all specimens.
 }
 

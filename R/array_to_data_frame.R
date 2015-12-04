@@ -1,11 +1,10 @@
 #' Convert landamrk array into data frame
 #' 
-#' Converts landmark array into data frame with additional column with specimens name. Can be used with lattice xyplot
-#'  function to plot all specimens.
+#' Converts landmark array into data frame with additional column with specimens name. Can be used with lattice xyplot function to plot all specimens.
 #'  
-#'  @param data landmark array
-#'  @param specimens.names optional vector containing specimens names
-#'  @export
+#' @param data landmark array
+#' @param specimens.names optional vector containing specimens names
+#' @export
 
 ar.to.df <- function(data,specimens.names=FALSE) {
   n.specimens <- dim(data)[3]
