@@ -10,6 +10,7 @@ change.curves <- function(curves,points.to.remove) {
   curves.list <- matrix.to.list(curves,break.points)
   n.curves <- length(curves.list)
   n.points <- length(points.to.remove)
+  points.to.remove <- points.to.remove[order(-points.to.remove)]
   for (i in 1:n.points) {
     point <- points.to.remove[1]
     for (j in 1:n.curves) {
