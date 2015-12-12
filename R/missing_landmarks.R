@@ -21,9 +21,11 @@ missing.landmarks <- function(data,method = 'EM') {
         k <- Mclust(over.zero[,1:2],2)
         clusters <- k$classification
         m.uncert <- mean(k$uncertainty)
+        size.1 <- length(which(clusters==1))
+        size.2 <- length(which(clusters==2))
         if (m.uncert < 0.005) {
             over.zero <- cbind(over.zero,clusters)
-            if (size[1]>size[2]) {
+            if (size.1>size.2) {
                 over.zero[over.zero[,4]==2,1:2] <- NA
             } else {
                 over.zero[over.zero[,4]==1,1:2] <- NA
