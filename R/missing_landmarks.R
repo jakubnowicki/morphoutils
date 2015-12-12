@@ -14,7 +14,7 @@ missing.landmarks <- function(data) {
         below.zero[,1:2] <- NA
     }
     over.zero <- data[data[,1] > 0 | data[,2] > 0,]
-    k <- kmeans(over.zero[,1:2],2)
+    k <- kmeans(over.zero[,1:2],2,nstart = 10)
     clusters <- k$cluster
     ss <- k$withinss
     size <- k$size
