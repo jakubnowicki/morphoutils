@@ -10,4 +10,4 @@ Description: A set of utility functions that can be used with geomorph package
     symmetry (based on OSymm function by Annat Harber).
 License: GPL-2
 RoxygenNote: 5.0.1
-Depends: shapes, abind
+Depends: shapes, abind, mclust

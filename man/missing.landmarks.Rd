@@ -4,10 +4,12 @@
 \alias{missing.landmarks}
 \title{Replace missing landmarks}
 \usage{
-missing.landmarks(data)
+missing.landmarks(data, method = "EM")
 }
 \arguments{
 \item{data}{landmark matrix}
+
+\item{method}{clustering method ('EM' - Expectation-maximization algorithm, 'kmeans' - k-means); default = 'EM'}
 }
 \description{
 Replaces missing landmarks with NA. Based on k-means clustering, seeks for separated group of landmarks (for example you can put all missing landmarks in the corner of the picture). Also handles with tpsdig way of writing missing andmarks (-1, -1).

@@ -3,9 +3,11 @@
 #' Replaces missing landmarks with NA. Based on k-means clustering, seeks for separated group of landmarks (for example you can put all missing landmarks in the corner of the picture). Also handles with tpsdig way of writing missing andmarks (-1, -1).
 #' 
 #' @param data landmark matrix
+#' @param method clustering method ('EM' - Expectation-maximization algorithm, 'kmeans' - k-means); default = 'EM'
 #' @export
+#' @import mclust
 
-missing.landmarks <- function(data) {
+missing.landmarks <- function(data,method = 'EM') {
     data <- as.data.frame(data)
     n.landmarks <- dim(data)[1]
     data$row.ID<-1:n.landmarks
@@ -14,16 +16,35 @@ missing.landmarks <- function(data) {
         below.zero[,1:2] <- NA
     }
     over.zero <- data[data[,1] > 0 | data[,2] > 0,]
-    k <- kmeans(over.zero[,1:2],2,nstart = 10)
-    clusters <- k$cluster
-    ss <- k$withinss
-    size <- k$size
-    if (abs(ss[1]-ss[2])>min(ss)) {
-        over.zero <- cbind(over.zero,clusters)
-        if (size[1]>size[2]) {
-            over.zero[over.zero[,4]==2,1:2] <- NA
+    
+    if (method == 'EM') {
+        k <- Mclust(over.zero[,1:2],2)
+        clusters <- k$classification
+        m.uncert <- mean(k$uncertainty)
+        if (m.uncert < 0.005) {
+            over.zero <- cbind(over.zero,clusters)
+            if (size[1]>size[2]) {
+                over.zero[over.zero[,4]==2,1:2] <- NA
+            } else {
+                over.zero[over.zero[,4]==1,1:2] <- NA
+            }
+        }
+    } else {
+        if (method == 'kmeans') {
+            k <- kmeans(over.zero[,1:2],2,nstart = 10)
+            clusters <- k$cluster
+            ss <- k$withinss
+            size <- k$size
+            if (abs(ss[1]-ss[2])>min(ss)) {
+                over.zero <- cbind(over.zero,clusters)
+                if (size[1]>size[2]) {
+                    over.zero[over.zero[,4]==2,1:2] <- NA
+                } else {
+                    over.zero[over.zero[,4]==1,1:2] <- NA
+                }
+            }
         } else {
-            over.zero[over.zero[,4]==1,1:2] <- NA
+            stop("Wrong clustering method")
         }
     }
     over.zero <- over.zero[,-4]
