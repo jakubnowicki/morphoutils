@@ -11,28 +11,28 @@ missing.landmarks <- function(data,method = 'EM') {
     data <- as.data.frame(data)
     n.landmarks <- dim(data)[1]
     data$row.ID<-1:n.landmarks
-    below.zero <- data[data[,1]<0 | data[,2] < 0,]
-    if (dim(below.zero)[1]!=0) {
-        below.zero[,1:2] <- NA
-    }
-    over.zero <- data[data[,1] > 0 | data[,2] > 0,]
-    
     if (method == 'EM') {
-        k <- Mclust(over.zero[,1:2],2)
+        k <- Mclust(data[,1:2],2)
         clusters <- k$classification
         m.uncert <- mean(k$uncertainty)
         size.1 <- length(which(clusters==1))
         size.2 <- length(which(clusters==2))
         if (m.uncert < 0.005) {
-            over.zero <- cbind(over.zero,clusters)
+            data <- cbind(data,clusters)
             if (size.1>size.2) {
-                over.zero[over.zero[,4]==2,1:2] <- NA
+                data[data[,4]==2,1:2] <- NA
             } else {
-                over.zero[over.zero[,4]==1,1:2] <- NA
+                data[data[,4]==1,1:2] <- NA
             }
         }
+        over.zero <- data
     } else {
         if (method == 'kmeans') {
+            below.zero <- data[data[,1]<0 | data[,2] < 0,]
+            if (dim(below.zero)[1]!=0) {
+                below.zero[,1:2] <- NA
+            }
+            over.zero <- data[data[,1] > 0 | data[,2] > 0,]
             k <- kmeans(over.zero[,1:2],2,nstart = 10)
             clusters <- k$cluster
             ss <- k$withinss
