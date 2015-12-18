@@ -26,6 +26,7 @@ missing.landmarks <- function(data,method = 'EM') {
             }
         }
         over.zero <- data
+        output <- over.zero[,-4]
     } else {
         if (method == 'kmeans') {
             below.zero <- data[data[,1]<0 | data[,2] < 0,]
@@ -45,12 +46,29 @@ missing.landmarks <- function(data,method = 'EM') {
                     over.zero[over.zero[,4]==1,1:2] <- NA
                 }
             }
+            over.zero <- over.zero[,-4]
+            output <- rbind(over.zero,below.zero)
         } else {
-            stop("Wrong clustering method")
+            if (method == 'clust') {
+                clust <- hclust(dist(data[1:2]))
+                class <- cutree(clust,k = 2)
+                size.1 <- length(which(class==1))
+                size.2 <- length(which(class==2))
+                if ((abs(size.2-size.1)/n.landmarks>0.45)) {
+                    data <- cbind(data,class)
+                    if (size.1>size.2) {
+                        data[data[,4]==2,1:2] <- NA
+                    } else {
+                        data[data[,4]==1,1:2] <- NA
+                    }
+                }
+                over.zero <- data
+                output <- over.zero[,-4]
+            } else {
+                stop("Wrong clustering method")
+            }
         }
     }
-    over.zero <- over.zero[,-4]
-    output <- rbind(over.zero,below.zero)
     output <- output[order(output$row.ID),]
     output <- unname(as.matrix(output[,1:2]))
     return(output)

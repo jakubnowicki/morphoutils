@@ -4,10 +4,13 @@
 \alias{find.missing.landmarks}
 \title{Replace missing landmarks in array}
 \usage{
-find.missing.landmarks(data, clear.names = FALSE, split = "\\\\")
+find.missing.landmarks(data, method = "clust", clear.names = FALSE,
+  split = "\\\\")
 }
 \arguments{
 \item{data}{landmark array}
+
+\item{method}{clustering method}
 
 \item{clear.names}{optional bolean for clearing specimens IDs; default = FALSE}
 
