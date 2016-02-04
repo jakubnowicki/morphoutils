@@ -6,7 +6,6 @@
 #' @param ... arrays to bind
 #' @param list.of.variables list of variables, each with levels corresponding to number of binded arrays
 #' @param as.factor logical indicating whether variables should be returned as factor
-#' @import abind
 #' @export
 
 bind.tps.with.variables <- function(...,list.of.variables,as.factor = TRUE) {
@@ -19,7 +18,7 @@ bind.tps.with.variables <- function(...,list.of.variables,as.factor = TRUE) {
       stop('wrong number of variables')
     }
   }
-  landmarks <- abind::abind(data, along = 3)
+  landmarks <- abind.2(data, along = 3)
   output <- list()
   output[[1]] <- landmarks
   for (i in 1:n.variables) {
