@@ -4,10 +4,11 @@
 #' 
 #' @param data landmark matrix
 #' @param method clustering method ('EM' - Expectation-maximization algorithm, 'kmeans' - k-means); default = 'EM'
+#' @param clust.parameter minimal proportion of missed landmarks in 'clust method; deafult = 0.45
 #' @export
 #' @import mclust
 
-missing.landmarks <- function(data,method = 'EM') {
+missing.landmarks <- function(data,method = 'EM', clust.parameter = 0.45) {
     data <- as.data.frame(data)
     n.landmarks <- dim(data)[1]
     data$row.ID<-1:n.landmarks
@@ -54,7 +55,7 @@ missing.landmarks <- function(data,method = 'EM') {
                 class <- cutree(clust,k = 2)
                 size.1 <- length(which(class==1))
                 size.2 <- length(which(class==2))
-                if ((abs(size.2-size.1)/n.landmarks>0.45)) {
+                if ((abs(size.2-size.1)/n.landmarks>clust.parameter)) {
                     data <- cbind(data,class)
                     if (size.1>size.2) {
                         data[data[,4]==2,1:2] <- NA
