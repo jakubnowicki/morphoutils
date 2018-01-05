@@ -14,4 +14,3 @@ shape.proportions(coords, sag.tr = TRUE)
 \description{
 Calculate shape proportions. Shape axes shoud be parallel to x-y coordinate axes.
 }
-

@@ -14,4 +14,3 @@ rm.landmark.from.curve(curve, landmark.nr)
 \description{
 Function removes selected landmark from a curve and changes numbers of remaining ones
 }
-

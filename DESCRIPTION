@@ -9,5 +9,7 @@ Description: A set of utility functions that can be used with geomorph package
     for removing specified landmarks (change.curves) and dealing with bilateral
     symmetry (based on OSymm function by Annat Harber).
 License: GPL-2
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 Depends: shapes, mclust, geomorph
+Suggests: knitr,
+    rmarkdown

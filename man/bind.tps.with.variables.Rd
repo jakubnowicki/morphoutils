@@ -17,4 +17,3 @@ bind.tps.with.variables(..., list.of.variables, as.factor = TRUE)
 Returns list with, as first element, binded landmark arrays readed from the tps files and, as next elements, 
 variables (taxon names, localisations, etc.).
 }
-

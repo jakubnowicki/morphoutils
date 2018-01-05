@@ -14,4 +14,3 @@ strain.matrix(a, theta)
 \description{
 Generates strain matrix
 }
-

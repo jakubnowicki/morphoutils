@@ -16,4 +16,3 @@ find.missing.pairs(data, right, left)
 \description{
 Find missing pairs of landmarks in array.
 }
-

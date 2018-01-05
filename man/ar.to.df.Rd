@@ -14,4 +14,3 @@ ar.to.df(data, specimens.names = FALSE)
 \description{
 Converts landmark array into data frame with additional column with specimens name. Can be used with lattice xyplot function to plot all specimens.
 }
-

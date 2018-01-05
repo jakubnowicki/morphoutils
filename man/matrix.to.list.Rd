@@ -14,4 +14,3 @@ matrix.to.list(curves, break.points)
 \description{
 Function converts semilandmark matrix into list form, each curve in the separate element of the list.
 }
-

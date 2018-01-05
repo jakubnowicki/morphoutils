@@ -12,4 +12,3 @@ find.curves(curves)
 \description{
 Finds beginings of curves in semilandmark curves matrix used in geomorph::gpagen
 }
-

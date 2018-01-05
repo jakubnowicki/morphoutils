@@ -14,4 +14,3 @@ proc.dist(x, y)
 \description{
 Calculate Procrustes distance
 }
-

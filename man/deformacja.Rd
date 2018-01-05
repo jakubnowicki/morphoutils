@@ -4,7 +4,7 @@
 \alias{deformacja}
 \title{Deform landmark data}
 \usage{
-deformacja(data, strain.matrix)
+deformacja(data, strain.matrix, angle = NULL)
 }
 \arguments{
 \item{data}{Landmark data (single specimens matrix)}
@@ -14,4 +14,3 @@ deformacja(data, strain.matrix)
 \description{
 Deforms landmark data using strain matrix.
 }
-

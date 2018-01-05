@@ -35,4 +35,3 @@ Combine multi-dimensional arrays. This is a generalization of cbind and rbind. T
 \author{
 Tony Plate <tplate@acm.org> and Richard Heiberger
 }
-

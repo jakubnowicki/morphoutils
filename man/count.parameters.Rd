@@ -20,4 +20,3 @@ landmark numbers (2 or more)}
 Counts linear parameters from landmark data. If elemens are specified as group of landmarks, object should be rotated
  - saggital axis should be parallel to y axis.
 }
-

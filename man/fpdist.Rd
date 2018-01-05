@@ -16,4 +16,3 @@ fpdist(x, y, reflect = FALSE)
 \description{
 Finds Procrustes distance between two objects
 }
-

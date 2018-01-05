@@ -16,4 +16,3 @@ missing.landmarks(data, method = "EM", clust.parameter = 0.45)
 \description{
 Replaces missing landmarks with NA. Based on k-means clustering, seeks for separated group of landmarks (for example you can put all missing landmarks in the corner of the picture). Also handles with tpsdig way of writing missing andmarks (-1, -1).
 }
-

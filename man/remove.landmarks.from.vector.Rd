@@ -14,4 +14,3 @@ remove.landmarks.from.vector(vector, landmarks)
 \description{
 Removes landmarks from vector.
 }
-

@@ -21,4 +21,3 @@ Symmetrize and estimate missing landmarks in bilateral set.
 \author{
 Annat Haber
 }
-

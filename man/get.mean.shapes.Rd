@@ -18,4 +18,3 @@ get.mean.shapes(data, Csize, breaks, simplify = TRUE)
 \description{
 Calculates ean shapes for size classes.
 }
-

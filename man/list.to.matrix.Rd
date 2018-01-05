@@ -12,4 +12,3 @@ list.to.matrix(curves.list)
 \description{
 Function converts a list of semilandmarks into a matrix that can be used in geomorph::gpagen.
 }
-

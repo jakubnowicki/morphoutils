@@ -14,4 +14,3 @@ clear.id(string.to.clean, split = "\\\\")
 \description{
 Clears specimens ID from directory and file extension.
 }
-

@@ -22,4 +22,3 @@ Function to convert a set of landmark numbers between asymmetric and symmetrized
 }
 \keyword{conversion}
 \keyword{landmarks,}
-

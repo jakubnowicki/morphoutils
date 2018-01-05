@@ -22,4 +22,3 @@ landmark numbers (2 or more)}
 \description{
 Creates data frame containing parameters from landmark array.
 }
-

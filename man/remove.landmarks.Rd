@@ -16,4 +16,3 @@ remove.landmarks(data, landmarks.to.remove, curves = NULL)
 \description{
 Removes selected landmarks from a list of arrays and from curves matrix.
 }
-

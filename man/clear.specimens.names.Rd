@@ -14,4 +14,3 @@ clear.specimens.names(data, split = "\\\\")
 \description{
 Clears specimens ID's in landmark array from directory and file extension.
 }
-
