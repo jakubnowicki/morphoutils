@@ -4,12 +4,14 @@
 \alias{strain.matrix}
 \title{Generate strain matrix}
 \usage{
-strain.matrix(a, theta)
+strain.matrix(a, theta, type = 1)
 }
 \arguments{
 \item{a}{a}
 
 \item{theta}{theta}
+
+\item{type}{as in Angielczyk and Sheets (2007) = 1, or with -sin(theta) = 2}
 }
 \description{
 Generates strain matrix
